@@ -1,3 +1,5 @@
+
+
 # React and JSX Introduction
 
 ## Project Walkthrough
@@ -38,6 +40,8 @@ Before diving in, I spent some time familiarizing myself with the following reso
 - Understand how React props work.
 - Understand how to build and deploy a React app to the cloud.
 
+---
+
 ## Task 0: Getting Started
 
 To kick things off, I set up my development environment and got familiar with the starter code.
@@ -69,32 +73,30 @@ To kick things off, I set up my development environment and got familiar with th
 5. **Set Up React:**
    Updated `src/main.jsx` to render the `App` component using the latest React 18+ syntax.
 
+### **Result**
+The development environment was successfully set up. The project is running locally, and I am able to view the starter code in the browser. The base structure of the app is ready for further customization.
+
 ---
 
 ## Task 1: Creating the Header
 
-The main focus of this task was building a dynamic header that displays a greeting based on the time of day and includes links to LinkedIn and my GitHub profiles. Here’s how I approached it:
+The main focus of this task was building a dynamic header that displays a greeting based on the time of day and includes links to LinkedIn and my GitHub profiles.
 
-### **Greeting Component**
-The `Greeting` component lives in `src/components/Greeting.jsx` and displays a personalized message depending on the time of day. I added a creative twist by including a toggle button that switches the greeting between English and Spanish. It was a fun way to practice using React’s state management with `useState`.
+### **What I Did**
+1. Created a `Greeting` component in `src/components/Greeting.jsx` to display a personalized message and image based on the current time of day.
+2. Used `useState` to add a language toggle feature, allowing the greeting to switch between English and Spanish.
+3. Created a `SocialLinks` component in `src/components/SocialLinks.jsx` to display icons for LinkedIn and GitHub, which open in new tabs.
+4. Combined the `Greeting` and `SocialLinks` components into a `Header` component (`src/components/Header.jsx`).
+5. Integrated the `Header` component into the `App` component (`src/App.jsx`), ensuring it displayed at the top of the page.
 
-### **Social Links Component**
-The `SocialLinks` component, stored in `src/components/SocialLinks.jsx`, displays icons for LinkedIn and GitHub. Each icon opens in a new tab for easy access.
-
-### **Header Component**
-To bring it all together, I created a `Header` component in `src/components/Header.jsx`. This component combines the `Greeting` and `SocialLinks` components inside a `<nav>` element. The result is a dynamic and reusable header.
-
-### **Adding the Header to the App**
-Finally, I integrated the `Header` into the `App` component (in `src/App.jsx`) to ensure it displayed on the page. Once everything was in place, the header featured a greeting with a time-of-day image and interactive links.
+### **Result**
+The header dynamically displays a greeting with an appropriate image and interactive social links. The greeting text updates based on both the time of day and the selected language.
 
 ---
 
 ## Task 2: Adding Sections
 
 For this task, I focused on creating reusable sections to display content dynamically, making the app more modular and maintainable.
-
-### **Section Component**
-The `Section` component, located in `src/components/Section.jsx`, is designed to render a title and any content passed between its opening and closing tags. This flexibility allows it to handle various types of content dynamically.
 
 ### **What I Did**
 1. **Created the `Section` Component:**
@@ -110,5 +112,32 @@ The `Section` component, located in `src/components/Section.jsx`, is designed to
 
 3. **Integrated with the Language Toggle:**
    - The title and content of each section dynamically update based on the global language toggle, ensuring consistency across the app.
+
+### **Result**
+The app now includes two well-structured sections that dynamically render based on the selected language. These sections add depth and interactivity to the app while keeping the content modular.
+
+---
+
+## Task 3: Adding Helpful Resources
+
+For this task, I created a new section to showcase resources that I found helpful for learning React. This section features interactive components for better usability.
+
+### **What I Did**
+1. **Built the `OpenLink` Component:**
+   - Created a reusable component in `src/components/OpenLink.jsx` to render an icon (`open.svg`) that opens a provided link in a new tab.
+
+2. **Built the `CopyLink` Component:**
+   - Created a reusable component in `src/components/CopyLink.jsx` to render an icon (`copy.svg`) that copies a provided link to the clipboard using the Clipboard API.
+
+3. **Built the `HelpfulResource` Component:**
+   - Combined `OpenLink` and `CopyLink` components into a single `HelpfulResource` component in `src/components/HelpfulResource.jsx`.
+   - Rendered a label describing the resource alongside icons for opening and copying the link.
+
+4. **Added the Helpful Resources Section:**
+   - Used the `Section` component in `src/App.jsx` to create a new section titled "Helpful Resources."
+   - Included five resources, each rendered using the `HelpfulResource` component. The titles and descriptions dynamically update based on the selected language.
+
+### **Result**
+The "Helpful Resources" section provides users with curated React learning materials. It includes functionality for quickly opening or copying links, improving the user experience.
 
 ---

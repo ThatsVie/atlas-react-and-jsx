@@ -26,7 +26,7 @@ const Greeting = () => {
       return {
         message: language === 'en' ? 'Good evening!' : '¡Buenas noches!',
         image: evening,
-        alt: language === 'en' ? 'Orange sun representing the evening' : 'Sol anaranjado que representa la tarde',
+        alt: language === 'en' ? 'Orange sun representing the evening' : 'Sol anaranjado que representa la noche',
       };
     } else {
       return {

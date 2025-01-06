@@ -77,6 +77,15 @@ nav {
   transform: scale(0.95);
 }
 
+.helpful-resource img {
+  transition: transform 0.2s ease-in-out, filter 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.helpful-resource img:hover {
+  filter: brightness(1.2);
+  transform: scale(1.1);
+}
 
 .about-me {
   background: var(--offwhite);
