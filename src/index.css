@@ -49,10 +49,12 @@ nav {
 }
 
 .social-links a img:hover {
+  background-color: var(--teal);
+  color: var(--white);
   transform: scale(1.1);
 }
 
-.greeting-container button {
+.language-toggle {
   background-color: var(--yellow);
   color: var(--blue);
   font-family: inherit;
@@ -61,16 +63,17 @@ nav {
   border-radius: 5px;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  margin-bottom: 20px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.greeting-container button:hover {
+.language-toggle:hover {
   background-color: var(--teal);
   color: var(--white);
   transform: scale(1.05);
 }
 
-.greeting-container button:active {
+.language-toggle:active {
   transform: scale(0.95);
 }
 

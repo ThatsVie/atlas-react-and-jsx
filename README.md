@@ -26,6 +26,11 @@ Before diving in, I spent some time familiarizing myself with the following reso
 
 ---
 
+### **Project Overview**
+- **Project Figma:** [React and JSX Intro Design](https://www.figma.com/design/9nLir4sMcuAdaVqCrkH1CD/React-and-JSX-Intro?node-id=0-1&p=f)
+- **Deployed Project Provided in Curriculum for Reference:** [Live Demo](https://atlas-react-and-jsx-intro.netlify.app/)
+
+---
 
 ## Learning Objectives
 - Understand how to do local development for a React app.
@@ -33,7 +38,6 @@ Before diving in, I spent some time familiarizing myself with the following reso
 - Understand how React props work.
 - Understand how to build and deploy a React app to the cloud.
 
----
 ## Task 0: Getting Started
 
 To kick things off, I set up my development environment and got familiar with the starter code.
@@ -85,6 +89,26 @@ Finally, I integrated the `Header` into the `App` component (in `src/App.jsx`) t
 
 ---
 
-## Reflections
+## Task 2: Adding Sections
 
-(to be updated)
+For this task, I focused on creating reusable sections to display content dynamically, making the app more modular and maintainable.
+
+### **Section Component**
+The `Section` component, located in `src/components/Section.jsx`, is designed to render a title and any content passed between its opening and closing tags. This flexibility allows it to handle various types of content dynamically.
+
+### **What I Did**
+1. **Created the `Section` Component:**
+   - Added a new component that accepts `title` and `children` props.
+   - Used these props to dynamically render a `<div>` containing an `<h1>` for the title and the content provided as children.
+
+2. **Added Two Sections to the App:**
+   - In `src/App.jsx`, I added two instances of the `Section` component:
+     - **What is React?**
+       - This section explains React in a fun, approachable way, comparing it to a capybara for its chill and adaptable nature.
+     - **Benefits of React:**
+       - This section lists five benefits of using React, such as reusable components, virtual DOM efficiency, and community support.
+
+3. **Integrated with the Language Toggle:**
+   - The title and content of each section dynamically update based on the global language toggle, ensuring consistency across the app.
+
+---
