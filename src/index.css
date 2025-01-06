@@ -44,6 +44,37 @@ nav {
   margin-right: 1rem;
 }
 
+.social-links a img {
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-links a img:hover {
+  transform: scale(1.1);
+}
+
+.greeting-container button {
+  background-color: var(--yellow);
+  color: var(--blue);
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.greeting-container button:hover {
+  background-color: var(--teal);
+  color: var(--white);
+  transform: scale(1.05);
+}
+
+.greeting-container button:active {
+  transform: scale(0.95);
+}
+
+
 .about-me {
   background: var(--offwhite);
   color: var(--blue);
