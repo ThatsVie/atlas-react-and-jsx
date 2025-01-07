@@ -25,10 +25,29 @@
   padding: 1rem 1rem;
 }
 
-nav {
+
+.header-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
+  background-color: var(--blue);
+  border-bottom: 2px solid var(--offwhite);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Left section (Greeting) */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .greeting {
@@ -38,10 +57,16 @@ nav {
 
 .greeting img {
   width: 50px;
+  margin-right: 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
 }
 
 .social-links a {
-  margin-right: 1rem;
+  margin-left: 0.5rem;
 }
 
 .social-links a img {
@@ -55,6 +80,7 @@ nav {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Language toggle */
 .language-toggle {
   background-color: var(--yellow);
   color: var(--blue);
@@ -64,7 +90,6 @@ nav {
   border-radius: 5px;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  margin-bottom: 20px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -79,15 +104,44 @@ nav {
   transform: scale(0.95);
 }
 
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.helpful-resource {
+  margin-top: 1rem;
+  margin-bottom: 2rem; /* Handles the last child case */
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: var(--offwhite); /* Applies to both helpful-resource and links */
+  text-decoration: none;
+}
+
 .helpful-resource img {
-  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin-left: 0.5rem;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .helpful-resource img:hover {
   background: var(--yellow);
   transform: scale(1.1) rotate(5deg);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.helpful-resource a {
+  display: flex; /* Inherits from helpful-resource */
+  color: inherit; /* Ensures the link uses the same color as parent */
+  text-decoration: none;
 }
 
 .about-me {
@@ -97,12 +151,14 @@ nav {
   border-radius: 30px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .about-me img {
   width: 200px;
   border-radius: 30px;
   margin-right: 2rem;
+  flex-shrink: 0;
 }
 
 .about-me a {
@@ -118,6 +174,23 @@ nav {
   color: var(--white);
   transform: scale(1.02);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-me img {
+    margin: 0 0 1.5rem 0;
+    width: 150px;
+  }
+
+  .about-me p {
+    font-size: 0.9rem;
+    line-height: 1.6; 
+  }
 }
 
 li::marker {
@@ -151,40 +224,16 @@ li:first-child {
   padding-top: 0;
 }
 
-.helpful-resource:last-child {
-  margin-bottom: 2rem;
-}
-
-.helpful-resource {
-  margin-top: 1rem;
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-}
-
-.helpful-resource,
-.helpful-resource a {
-  color: var(--offwhite);
-  text-decoration: none;
-  display: flex;
-}
-
-.helpful-resource img {
-  margin-left: 0.5rem;
-}
-
-.copy {
-  cursor: pointer;
-}
-
 footer {
-  padding: 0 3rem 3rem 3rem;
+  padding: 2rem 1rem;
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid var(--offwhite);
+  color: var(--offwhite);
+  border-top: 2px solid var(--yellow);
+  text-align: center;
 }
 
 footer ul {
@@ -192,19 +241,34 @@ footer ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
   padding: 0;
+  margin-bottom: 1rem;
 }
 
 footer ul li::before {
   content: none;
 }
 
-footer li,
-footer li:first-child {
-  padding: 1rem;
+footer li {
+  padding: 0;
 }
 
 footer a {
-  color: var(--offwhite);
+  color: var(--yellow);
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+footer a:hover {
+  color: var(--teal);
+  transform: scale(1.1);
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: var(--offwhite);
+  margin-top: 1rem;
+  text-align: center;
 }

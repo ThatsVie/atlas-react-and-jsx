@@ -180,3 +180,46 @@ For this task, I created an **About Me** section to showcase a brief introductio
 The **About Me** section effectively introduces me as a developer while maintaining a touch of creativity and personality. The language toggle seamlessly switches the content between **English** and **Spanish**, ensuring accessibility for a broader audience.
 
 ---
+
+
+### **Task 5: Footer**
+
+For this task, I created a **Footer** component that includes dynamic links and year rendering. The aim was to provide a clean, accessible footer that complements the rest of the app.
+
+---
+
+### **What I Did**
+
+1. **Created the `Footer` Component**:
+   - Added a new `Footer` component in `src/components/Footer.jsx`.
+   - The component renders:
+     - An unordered list containing dynamic links imported from `assets/links.json`.
+     - A copyright message that dynamically displays the current year using the JavaScript `Date` class.
+
+2. **Imported Dynamic Links**:
+   - Used a JSON file (`assets/links.json`) to store the footer links, allowing for easy updates and reusability.
+   - Rendered each link using the `map` method to dynamically create list items, where:
+     - The `label` value serves as the visible text.
+     - The `link` value is the URL the user is directed to.
+
+3. **Added the Component to the App**:
+   - Imported the `Footer` component into `src/App.jsx`.
+   - Placed it at the bottom of the app layout, ensuring proper spacing and alignment.
+
+4. **Styled the Component**:
+   - Enhanced the existing footer styling to improve aesthetics and accessibility:
+     - Added spacing between the links for better readability.
+     - Applied hover effects to emphasize interactivity.
+     - Ensured proper alignment and contrast to maintain consistency with the app's overall design.
+   - The styling includes:
+     - Center-aligned links and copyright text.
+     - A hover effect on links, including scaling and color change for better visual feedback.
+
+5. **Ensured Responsiveness**:
+   - Tested the footer on different screen sizes to confirm it looks good and remains functional on mobile devices.
+
+---
+
+### **Result**
+
+The **Footer** component provides users with easy access to important links and displays a copyright message with the current year. It maintains a clean, professional design that integrates seamlessly with the rest of the app.

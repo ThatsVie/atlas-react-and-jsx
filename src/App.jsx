@@ -1,17 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header.jsx';
 import Section from './components/Section.jsx';
 import HelpfulResource from './components/HelpfulResource.jsx';
 import AboutMe from './components/AboutMe.jsx';
+import Footer from './components/Footer.jsx';
 
-export const LanguageContext = React.createContext(); // global language context
+export const LanguageContext = React.createContext();
 
 function App() {
-  const [language, setLanguage] = useState('en'); // app-wide language state
+  const [language, setLanguage] = useState('en');
 
   const toggleLanguage = () => {
     setLanguage((prev) => (prev === 'en' ? 'es' : 'en'));
   };
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('.section');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   const resources = [
     {
@@ -32,26 +48,24 @@ function App() {
     },
     {
       link: 'https://zustand.docs.pmnd.rs/getting-started/introduction',
-      label: language === 'en' 
-        ? 'Introduction to Zustand - A lightweight state management library for React' : 'Introducción a Zustand: una biblioteca ligera para la gestión de estado en React',
+      label: language === 'en'
+        ? 'Introduction to Zustand - A lightweight state management library for React'
+        : 'Introducción a Zustand: una biblioteca ligera para la gestión de estado en React',
     },
   ];
 
   return (
     <LanguageContext.Provider value={language}>
       <div className="app">
-        <Header />
-        <button className="language-toggle" onClick={toggleLanguage}>
-          {language === 'en' ? 'Español' : 'English'}
-        </button>
-        <Section title={language === 'en' ? "What is React?" : "¿Qué es React?"}>
+        <Header toggleLanguage={toggleLanguage} />
+        <Section className="section" title={language === 'en' ? "What is React?" : "¿Qué es React?"}>
           <p>
             {language === 'en'
               ? "React is like a capybara in the world of JavaScript frameworks—chill, adaptable, and gets along with everyone."
               : "React es como una capibara en el mundo de los frameworks de JavaScript: tranquilo, adaptable y se lleva bien con todos."}
           </p>
         </Section>
-        <Section title={language === 'en' ? "Benefits of React" : "Beneficios de React"}>
+        <Section className="section" title={language === 'en' ? "Benefits of React" : "Beneficios de React"}>
           <ul>
             {language === 'en' ? (
               <>
@@ -72,12 +86,13 @@ function App() {
             )}
           </ul>
         </Section>
-        <Section title={language === 'en' ? "Helpful Resources" : "Recursos útiles"}>
+        <Section className="section" title={language === 'en' ? "Helpful Resources" : "Recursos útiles"}>
           {resources.map((resource, index) => (
             <HelpfulResource key={index} link={resource.link} label={resource.label} />
           ))}
         </Section>
-        <AboutMe />
+        <AboutMe className="section" />
+        <Footer />
       </div>
     </LanguageContext.Provider>
   );

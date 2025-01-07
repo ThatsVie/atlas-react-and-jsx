@@ -37,7 +37,7 @@ const AboutMe = () => {
           <>
             Hola, soy Vie (/vi/). Estoy en mi quinto y último trimestre en <strong>Atlas School</strong>, especializándome en <strong>Full Stack Web Development</strong>. 
             Mis tecnologías favoritas incluyen <strong>JavaScript</strong> y <strong>MongoDB</strong>. Después de graduarme, encontraré empleo valioso en una empresa que valore 
-            la inclusión y la innovación, mientras continuo creciendo mis proyectos apasionantes: 
+            la inclusión y la innovación, mientras continuo creciendo mis proyectos personales: 
             <a href="https://whatdoyouknowaboutcovid19.com" target="_blank" rel="noopener noreferrer">
             What Do You Know About COVID-19?
             </a>
