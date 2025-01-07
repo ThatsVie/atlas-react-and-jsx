@@ -4,6 +4,9 @@
 
 ![capybara](https://github.com/user-attachments/assets/fddca9e8-10e9-4091-ace1-e84d2b2eea05)
 
+
+ **[Deployed project](https://atlas-react-jsx-vp.netlify.app/)**
+
 ## Project Walkthrough
 
 This project is a hands-on introduction to React and JSX, focusing on building a basic static site. Along the way, I explored reusable components, JSX syntax, and props while also experimenting with creative additions like a Spanish toggle. Here’s how I approached it step-by-step, sharing what I did and how you can recreate it yourself.
