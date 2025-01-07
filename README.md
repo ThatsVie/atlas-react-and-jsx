@@ -141,3 +141,42 @@ For this task, I created a new section to showcase resources that I found helpfu
 The "Helpful Resources" section provides users with curated React learning materials. It includes functionality for quickly opening or copying links, improving the user experience.
 
 ---
+
+## **Task 4: About Me**
+
+For this task, I created an **About Me** section to showcase a brief introduction about myself, my technical expertise, and my hobbies. The aim was to build a visually appealing and informative component that dynamically adjusts based on the app's language toggle.
+
+### **What I Did**
+
+1. **Created the `AboutMe` Component**:
+   - Added a new `AboutMe` component in `src/components/AboutMe.jsx`.
+   - The component includes:
+     - An image of a stylish pug to represent a whimsical part of my personality.
+     - A paragraph introducing myself, highlighting:
+       - My name.
+       - My specialization in **Full Stack Web Development**.
+       - My current trimester.
+       - Technologies I enjoy working with (**JavaScript** and **MongoDB**).
+       - My career aspirations after graduation.
+       - My personal hobbies, including cooking, baking, and movement practices.
+
+2. **Integrated Language Toggle**:
+   - Used the `LanguageContext` from the app to render the content in both **English** and **Spanish**.
+   - Ensured the bio dynamically updates when the language toggle is switched.
+
+3. **Styled the Component**:
+   - The `AboutMe` component is styled with a focus on readability and aesthetics:
+     - A background with a soft beige tone to create contrast with the rest of the page.
+     - A rounded image frame for visual appeal.
+     - Clean, structured typography for the bio content.
+
+4. **Added the Component to the App**:
+   - Imported the `AboutMe` component into `src/App.jsx`.
+   - Placed it at the bottom of the app layout to flow naturally with the other sections.
+
+
+### **Result**
+
+The **About Me** section effectively introduces me as a developer while maintaining a touch of creativity and personality. The language toggle seamlessly switches the content between **English** and **Spanish**, ensuring accessibility for a broader audience.
+
+---

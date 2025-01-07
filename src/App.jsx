@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './components/Header.jsx';
 import Section from './components/Section.jsx';
 import HelpfulResource from './components/HelpfulResource.jsx';
+import AboutMe from './components/AboutMe.jsx';
 
 export const LanguageContext = React.createContext(); // global language context
 
@@ -76,6 +77,7 @@ function App() {
             <HelpfulResource key={index} link={resource.link} label={resource.label} />
           ))}
         </Section>
+        <AboutMe />
       </div>
     </LanguageContext.Provider>
   );
