@@ -7,11 +7,32 @@
 
  **[Deployed project](https://atlas-react-jsx-vp.netlify.app/)**
 
+</div>
+
+
+## Table of Contents
+- [Project Walkthrough](#project-walkthrough)
+- [Resources](#resources)
+  - [What I Read](#what-i-read)
+  - [What I Watched](#what-i-watched)
+  - [Tools I Used](#tools-i-used)
+- [Project Overview](#project-overview)
+- [Learning Objectives](#learning-objectives)
+- [Task 0: Getting Started](#task-0-getting-started)
+- [Task 1: Creating the Header](#task-1-creating-the-header)
+- [Task 2: Adding Sections](#task-2-adding-sections)
+- [Task 3: Adding Helpful Resources](#task-3-adding-helpful-resources)
+- [Task 4: About Me](#task-4-about-me)
+- [Task 5: Footer](#task-5-footer)
+- [Task 6: Deploy Application](#task-6-deploy-application)
+
+---
+
 ## Project Walkthrough
 
 This project is a hands-on introduction to React and JSX, focusing on building a basic static site. Along the way, I explored reusable components, JSX syntax, and props while also experimenting with creative additions like a Spanish toggle. Here’s how I approached it step-by-step, sharing what I did and how you can recreate it yourself.
 
-</div>
+
 
 ---
 
@@ -230,3 +251,39 @@ For this task, I created a **Footer** component that includes dynamic links and 
 ### **Result**
 
 The **Footer** component provides users with easy access to important links and displays a copyright message with the current year. It maintains a clean, professional design that integrates seamlessly with the rest of the app.
+
+
+
+
+## Task 6: Deploy Application
+
+In this task, I deployed the React application to **Netlify** and ensured it was accessible via a live URL.
+
+### **What I Did**
+
+1. **Built the Project:**
+   - Ran the following command to build the project for production:
+     ```bash
+     npm run build
+     ```
+   - This created a `dist` folder containing the optimized production files.
+
+2. **Uploaded to Netlify:**
+   - Logged into [Netlify](https://www.netlify.com/) and created a new site.
+   - Dragged and dropped the contents of the `dist` folder into Netlify's deployment area.
+
+3. **Customized the Site Name (Optional):**
+   - Updated the site name to `atlas-react-jsx-vp` for better recognition.
+
+4. **Verified the Deployment:**
+   - Confirmed that the site is live and fully functional at:
+     **[https://atlas-react-jsx-vp.netlify.app/](https://atlas-react-jsx-vp.netlify.app/)**
+
+5. **Added the URL to the README:**
+   - Included the live URL at the top of the README under "Live Demo" for easy access.
+
+
+### **Result**
+The application is now deployed and accessible at the provided URL. It is fully functional, with all tasks completed and verified.
+
+---
