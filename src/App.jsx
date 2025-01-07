@@ -4,6 +4,8 @@ import Section from './components/Section.jsx';
 import HelpfulResource from './components/HelpfulResource.jsx';
 import AboutMe from './components/AboutMe.jsx';
 import Footer from './components/Footer.jsx';
+import capybara from './assets/capybara.png';
+
 
 export const LanguageContext = React.createContext();
 
@@ -59,12 +61,23 @@ function App() {
       <div className="app">
         <Header toggleLanguage={toggleLanguage} />
         <Section className="section" title={language === 'en' ? "What is React?" : "¿Qué es React?"}>
-          <p>
-            {language === 'en'
-              ? "React is like a capybara in the world of JavaScript frameworks—chill, adaptable, and gets along with everyone."
-              : "React es como una capibara en el mundo de los frameworks de JavaScript: tranquilo, adaptable y se lleva bien con todos."}
-          </p>
+        <div className="react-section">
+        <p>
+          {language === 'en'
+          ? "React is like a capybara in the world of JavaScript frameworks—chill, adaptable, and gets along with everyone."
+          : "React es como una capibara en el mundo de los frameworks de JavaScript: tranquilo, adaptable y se lleva bien con todos."}
+        </p>
+        <img 
+          src={capybara} 
+          alt={language === 'en' 
+          ? "A sleek and vibrant digital illustration of a capybara symbolizing React's adaptability." 
+          : "Una ilustración digital elegante y vibrante de una capibara que simboliza la adaptabilidad de React."
+            } 
+          className="capybara-image"
+          />
+        </div>
         </Section>
+
         <Section className="section" title={language === 'en' ? "Benefits of React" : "Beneficios de React"}>
           <ul>
             {language === 'en' ? (
