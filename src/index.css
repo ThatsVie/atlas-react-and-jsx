@@ -25,7 +25,6 @@
   padding: 1rem 1rem;
 }
 
-
 .header-nav {
   display: flex;
   justify-content: space-between;
@@ -38,7 +37,6 @@
   z-index: 1000;
 }
 
-/* Left section (Greeting) */
 .header-left {
   display: flex;
   align-items: center;
@@ -80,7 +78,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Language toggle */
 .language-toggle {
   background-color: var(--yellow);
   color: var(--blue);
@@ -115,14 +112,13 @@
   transform: translateY(0);
 }
 
-
 .helpful-resource {
   margin-top: 1rem;
-  margin-bottom: 2rem; /* Handles the last child case */
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   font-weight: bold;
-  color: var(--offwhite); /* Applies to both helpful-resource and links */
+  color: var(--offwhite);
   text-decoration: none;
 }
 
@@ -139,8 +135,8 @@
 }
 
 .helpful-resource a {
-  display: flex; /* Inherits from helpful-resource */
-  color: inherit; /* Ensures the link uses the same color as parent */
+  display: flex;
+  color: inherit;
   text-decoration: none;
 }
 
