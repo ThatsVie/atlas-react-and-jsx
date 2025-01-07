@@ -45,13 +45,14 @@ nav {
 }
 
 .social-links a img {
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .social-links a img:hover {
-  background-color: var(--teal);
-  color: var(--white);
-  transform: scale(1.1);
+  background: var(--teal);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .language-toggle {
@@ -71,6 +72,7 @@ nav {
   background-color: var(--teal);
   color: var(--white);
   transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .language-toggle:active {
@@ -78,13 +80,14 @@ nav {
 }
 
 .helpful-resource img {
-  transition: transform 0.2s ease-in-out, filter 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
 }
 
 .helpful-resource img:hover {
-  filter: brightness(1.2);
-  transform: scale(1.1);
+  background: var(--yellow);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .about-me {
@@ -103,18 +106,19 @@ nav {
 }
 
 .about-me a {
-  color: var(--teal);
+  color: var(--blue);
   font-weight: bold;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-radius: 5px;
+  margin: 0 0.2rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 .about-me a:hover {
-  color: var(--red);
-  border-bottom: 2px solid var(--yellow);
+  background: var(--teal);
+  color: var(--white);
+  transform: scale(1.02);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-
 
 li::marker {
   display: flex;
