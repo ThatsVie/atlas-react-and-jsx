@@ -5,7 +5,28 @@
 ![capybara](https://github.com/user-attachments/assets/fddca9e8-10e9-4091-ace1-e84d2b2eea05)
 
 
- **[Deployed project](https://atlas-react-jsx-vp.netlify.app/)**
+**[Deployed project](https://atlas-react-jsx-vp.netlify.app/)**
+
+---
+
+### Final Result in English and Spanish
+
+Here is a comparison of the English and Spanish versions of the application:
+
+<table>
+  <tr>
+    <td align="center"><strong>English Version</strong></td>
+    <td align="center"><strong>Spanish Version</strong></td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/fdb2522c-b4e1-4e4a-b9d6-284d57f6dd40" alt="English Version" width="400" />
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/683b99f7-88fb-471d-adcd-dcbfcfbe8408" alt="Spanish Version" width="400" />
+    </td>
+  </tr>
+</table>
 
 </div>
 
