@@ -46,6 +46,7 @@ Here is a comparison of the English and Spanish versions of the application:
 - [Task 4: About Me](#task-4-about-me)
 - [Task 5: Footer](#task-5-footer)
 - [Task 6: Deploy Application](#task-6-deploy-application)
+- [Reflections](#reflections)
 
 ---
 
@@ -308,3 +309,11 @@ In this task, I deployed the React application to **Netlify** and ensured it was
 The application is now deployed and accessible at the provided URL. It is fully functional, with all tasks completed and verified.
 
 ---
+
+## Reflections
+
+This project was a great opportunity to deepen my understanding of React and JSX fundamentals. It allowed me to apply concepts like `useState`, `useEffect`, and `useContext` to real-world scenarios while reinforcing best practices for writing modular and maintainable code. 
+
+I particularly enjoyed building features like the language toggle and the About Me section, which made the app more personal and accessible. Adding unique touches, like the vibrant capybara illustration, balanced functionality with aesthetic appeal and made the experience more fun.
+
+This project boosted my confidence in React and highlighted the value of thoughtful details that enhance the user experience. It was a rewarding step forward in my journey, preparing me for more advanced projects and collaborations.
