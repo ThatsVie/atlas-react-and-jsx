@@ -11,7 +11,6 @@
 
 ### Final Result in English and Spanish
 
-Here is a comparison of the English and Spanish versions of the application:
 
 <table>
   <tr>
